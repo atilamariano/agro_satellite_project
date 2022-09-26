@@ -1,0 +1,9 @@
+<button class="button" style="vertical-align:middle" routerLink="farm"><span> Cadastrar </span></button>
+
+<ul>
+  <li *ngFor="let farm of farms">
+      <a [routerLink]="['/details', farm.id]" [state]="[{ data: farm }]">
+        <p><b>{{farm.name}}</b></p>
+      </a>
+  </li>
+</ul>

@@ -1,0 +1,10 @@
+<button id="backButton"  style="vertical-align:middle" routerLink=""> <span>Voltar</span></button>
+
+<h3><b>Detalhes da Fazenda</b></h3>
+<p><b> Nome: </b>{{farm.name}}</p>
+<p><b>ID do dono: </b>{{farm.owner_id}}</p>
+<p><b>Coordenadas do Centroide:</b> {{farm.centroid}}</p>
+
+<button class="button" style="vertical-align:middle" routerLink="/register" [state]="[{ data: farm }]" style="cursor: pointer;"><span>Editar</span></button>
+
+<button class="button" style="vertical-align:middle" (click)="delete()"><span>Excluir</span></button>

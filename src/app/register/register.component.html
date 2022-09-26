@@ -1,0 +1,46 @@
+<button id="backButton"  style="vertical-align:middle" (click)="navigateBack()"><span> Voltar </span></button>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="form-input">
+    <label for="name">
+      Nome da fazenda
+    </label>
+    <input type="text" formControlName="name" placeholder="Ex: Fazenda Verde">
+  </div>
+
+  <div class="form-input">
+    <label for="owner_id">
+      ID do dono
+    </label>
+    <input type="number" formControlName="owner_id" placeholder="Escolha o N°">
+  </div>
+
+  <div class="form-input">
+    <label for="geometry_type">
+      Tipo de geometria
+    </label>
+    <input type="text" formControlName="geometry_type" placeholder="Ex: Eclipse">
+  </div>
+  
+  <div class="form-input">
+    <label for="geometry_coordinates">
+      Coordenadas da geometria
+    </label>
+    <input type="text" formControlName="geometry_coordinates" placeholder="Ex: 41°24'12.2N,2°10'26.5E">
+  </div>
+
+  <div class="form-input">
+    <label for="centroid">
+      Coordenadas do Centroíde X,Y
+    </label>
+    <input type="text" formControlName="centroid" placeholder="Ex: -41°24'12.2N, 2°10'26.5E">
+  </div>
+  <div class="form-input">
+    <label for="area">
+      Área
+    </label>
+    <input type="number" formControlName="area" placeholder="Escolha o Tamanho da área M²">
+  </div>
+
+  <button class="button" style="vertical-align:middle" (click)="submitForm()" style="cursor: pointer;"><span> Enviar </span></button>
+</form>
